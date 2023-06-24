@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        margin: 0;
+        display:flex;
+        align-items: center;
+        justify-content: center;  
+        background-color:#242020;
+        color:white;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        height:100vh;
+    }
+        .container{
+            
+            padding:20px;
+            border-radius:3%;
+            background-color: orangered;
+        }
+        input{
+            padding:10px;
+            font-size:20px;
+            font-weight: 70px;
+            background-color:greenyellow;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color:red;
+            border:none;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease-in-out;
+
+        }
+        input:focus{
+            outline: none;
+            border-color: green;
+
+        }
+
+        #alert{
+            color:white;
+            font-size:35px;
+            font-weight: 100px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .bt1 {
+            background-color: coral;
+        }
+        .bt1:hover{
+            background-color: greenyellow;
+            cursor: pointer;
+        }
+        .footer{
+            
+            color:white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 10px;
+            padding:10px;
+        }
+    </style>
+    
+</head>
+<body>
+    
+<div class="container">
+    <div align="center">SIMPLE CALCULATOR 1.0</div><br>
+<form>
+<input type="text" id="in1"><br><br>
+<input type="text" id="in2"><br><br>
+<div id="alert" align="center"></div><br><br>
+<div align="right">
+<input type="button" value="+" class="bt1" onclick="add(in1.value,in2.value)" title="ADDITION">&nbsp;&nbsp;
+<input type="button" value="-" class="bt1" onclick="sup(in1.value,in2.value)" title="SUPRACTION">&nbsp;&nbsp;
+<input type="button" value="*"  class="bt1" onclick="mul(in1.value,in2.value)" title="MULTIPLICATION">&nbsp;&nbsp;
+<input type="button" value="/" class="bt1" onclick="div(in1.value,in2.value)" title="DIVISION">&nbsp;&nbsp;
+<br><br><br>
+<div align="left" class="footer">
+    CREATED BY <u style="cursor: pointer; color:blue" title="ssairam18@gmail.com">SAIRAM.</u>
+</div>
+</div>
+</form>
+<br>
+</div>
+
+<script>
+    function add(a,b){
+document.getElementById("alert").innerHTML = (parseFloat(a) + parseFloat(b)).toFixed(4);
+    }
+    function sup(a,b){
+document.getElementById("alert").innerHTML = (a - b).toFixed(4);
+    }
+    function mul(a,b){
+document.getElementById("alert").innerHTML = (a * b).toFixed(4);
+    }
+    function div(a,b){
+document.getElementById("alert").innerHTML = (a / b).toFixed(4);
+    }
+</script>
+</body>
+</html>
